@@ -54,11 +54,11 @@ class ImageClassifierPage extends StatelessWidget {
                   borderRadius: BorderRadiusDirectional.circular(12.0),
                   boxShadow: [
                     BoxShadow(
-                        color: aiPurple.withOpacity(0.16),
+                        color: Colors.blue.withOpacity(0.16),
                         blurRadius: 8,
                         spreadRadius: 8)
                   ],
-                  color: aiPurple.withOpacity(0.8),
+                  color: Colors.blue.withOpacity(0.8),
                 ),
                 child: state is DetectImageLoadingState
                     ? const CircularProgressIndicator()

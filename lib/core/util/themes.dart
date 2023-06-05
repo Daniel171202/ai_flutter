@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 ThemeData appTheme() {
   return ThemeData(
     visualDensity: VisualDensity.adaptivePlatformDensity,
-    scaffoldBackgroundColor: aiLightPurple,
+    scaffoldBackgroundColor: const Color.fromARGB(255, 178, 178, 178),
     iconTheme: IconThemeData(color: aiWhite),
-    primarySwatch: aiPurple,
+    primarySwatch: Colors.blue,
   );
 }
 

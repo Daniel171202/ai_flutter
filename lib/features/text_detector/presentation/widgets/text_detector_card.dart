@@ -43,7 +43,7 @@ class TextDetectorCard extends StatelessWidget {
             child: Align(
               alignment: Alignment.bottomRight,
               child: Text(
-                color == Colors.red ? "NEGATIVE" : "POSITIVE",
+                color == Colors.red ? "NEGATIVO" : "POSITIVO",
                 maxLines: 2,
                 overflow: TextOverflow.ellipsis,
                 style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),

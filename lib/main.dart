@@ -14,7 +14,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'AI App',
+      debugShowCheckedModeBanner: false,
+      title: 'Inteligencia Artificial',
       theme: appTheme(),
       initialRoute: HomeLayout.routeName,
       onGenerateRoute: (settings) {

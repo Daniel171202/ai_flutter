@@ -14,10 +14,10 @@ class BoxWidget extends StatelessWidget {
     Color color = Colors.primaries[(result!.label.length + result!.label.codeUnitAt(0) + result!.id) % Colors.primaries.length];
 
     return Positioned(
-      left: result!.renderLocation.left,
-      top: result!.renderLocation.top,
-      width: result!.renderLocation.width,
-      height: result!.renderLocation.height,
+      left: result!.renderLocation.left*3.2,
+      top: result!.renderLocation.top*1.4,
+      width: result!.renderLocation.width*3,
+      height: result!.renderLocation.height*2,
       child: Container(
         width: result!.renderLocation.width,
         height: result!.renderLocation.height,

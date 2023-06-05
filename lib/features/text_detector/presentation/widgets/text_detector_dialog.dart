@@ -10,9 +10,9 @@ Future<String?> dialogBuilder(BuildContext context) {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10),
           ),
-          title: const Text('Enter The Text'),
+          title: const Text('Ingresa un texto en ingles'),
           content: const Text(
-              'the text will be classified to either positive or negative'),
+              'este texto sera clasificado en base a su positividad'),
           actions: <Widget>[
             Column(
               children: [
@@ -36,7 +36,7 @@ Future<String?> dialogBuilder(BuildContext context) {
                     fontWeight: FontWeight.w500,
                   ),
                   decoration: const InputDecoration(
-                    hintText: "I like you",
+                    hintText: "Por ejemplo: I like you",
                     prefixIcon: Icon(
                       Icons.insert_comment,
                     ),
@@ -46,7 +46,7 @@ Future<String?> dialogBuilder(BuildContext context) {
                   style: TextButton.styleFrom(
                     textStyle: Theme.of(context).textTheme.labelLarge,
                   ),
-                  child: const Text('Cancel'),
+                  child: const Text('Cancelar'),
                   onPressed: () {
                     Navigator.of(context).pop();
                   },

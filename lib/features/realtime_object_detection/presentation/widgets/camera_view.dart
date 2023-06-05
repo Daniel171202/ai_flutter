@@ -1,5 +1,3 @@
-// ignore_for_file: use_build_context_synchronously, unnecessary_null_comparison, library_private_types_in_public_api
-
 import 'dart:isolate';
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
@@ -18,7 +16,8 @@ class CameraView extends StatefulWidget {
   final Function(Stats stats) statsCallback;
 
   /// Constructor
-  const CameraView(this.resultsCallback, this.statsCallback, {super.key});
+  const CameraView(this.resultsCallback, this.statsCallback, {Key? key}) : super(key: key);
+  
   @override
   _CameraViewState createState() => _CameraViewState();
 }
@@ -46,7 +45,7 @@ class _CameraViewState extends State<CameraView> with WidgetsBindingObserver {
   }
 
   void initStateAsync() async {
-    WidgetsBinding.instance.addObserver(this);
+    WidgetsBinding.instance?.addObserver(this);
 
     // Spawn a new isolate
     isolateUtils = IsolateUtils();
@@ -85,7 +84,7 @@ class _CameraViewState extends State<CameraView> with WidgetsBindingObserver {
       // same as screenWidth while maintaining the aspectRatio
       Size screenSize = MediaQuery.of(context).size;
       CameraViewSingleton.screenSize = screenSize;
-      CameraViewSingleton.ratio = screenSize.width / previewSize!.height;
+      CameraViewSingleton.ratio =  9/ 16;
     });
   }
 
@@ -97,8 +96,9 @@ class _CameraViewState extends State<CameraView> with WidgetsBindingObserver {
     }
 
     return AspectRatio(
-        aspectRatio: cameraController!.value.aspectRatio,
-        child: CameraPreview(cameraController!));
+      aspectRatio: cameraController!.value.aspectRatio,
+      child: CameraPreview(cameraController!),
+    );
   }
 
   /// Callback to receive each frame [CameraImage] perform inference on it
@@ -165,7 +165,7 @@ class _CameraViewState extends State<CameraView> with WidgetsBindingObserver {
 
   @override
   void dispose() {
-    WidgetsBinding.instance.removeObserver(this);
+    WidgetsBinding.instance?.removeObserver(this);
     cameraController!.dispose();
     super.dispose();
   }

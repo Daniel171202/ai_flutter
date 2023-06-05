@@ -19,14 +19,14 @@ class ImageResultWidget extends StatelessWidget {
     return Container(
         padding: const EdgeInsets.all(8.0),
         margin: const EdgeInsets.all(15.0),
-        height: height * 0.1,
+        height: height*0.1 ,
         width: width,
         decoration: BoxDecoration(
-          color: aiGrey,
+          color: Colors.black,
           borderRadius: BorderRadiusDirectional.circular(12.0),
           boxShadow: [
             BoxShadow(
-                color: aiGrey.withOpacity(0.16),
+                color: Colors.black.withOpacity(0.16),
                 blurRadius: 8,
                 spreadRadius: 8)
           ],
